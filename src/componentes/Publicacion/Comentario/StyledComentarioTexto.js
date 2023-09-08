@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
-export const StyledLiConteiner = styled.div`
+export const StyledComentarioTexto = styled.div`
   display: flex;
-  justify-content: flex-start;
   flex-direction: row;
+  width: 500px;
 `;

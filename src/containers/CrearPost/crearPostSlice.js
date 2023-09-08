@@ -8,9 +8,13 @@ const initialState = {
 export const crearPostSlice = createSlice({
   name: "crearPostSlice",
   initialState,
-  reducers: {},
+  reducers: {
+    actualizarMensaje: (state, action) => {
+      state.mensaje = "Haz clic aquí y comienza a escribir...";
+    },
+  },
 });
 
-export const {} = crearPostSlice.actions;
+export const { actualizarMensaje } = crearPostSlice.actions;
 
 export default crearPostSlice.reducer;

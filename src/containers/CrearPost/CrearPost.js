@@ -9,6 +9,7 @@ import { StyledTextCantidadCaracteres } from "../../componentes/CrearPost/DivInp
 import { StyledButton } from "../../componentes/Button/StyledButton";
 import { v4 as uuidv4 } from "uuid";
 import { crearPost } from "../ListaPublicaciones/listaPublicacionesSlice";
+import { actualizarMensaje } from "../CrearPost/crearPostSlice";
 
 const CrearPost = () => {
   const dispatch = useDispatch();
@@ -54,6 +55,8 @@ const CrearPost = () => {
         comentarios: [{ user: userName, texto: "Hola pepito como estas?" }],
       })
     );
+    dispatch(actualizarMensaje());
+    divRef.current.textContent = mensaje;
   };
 
   useEffect(() => {
